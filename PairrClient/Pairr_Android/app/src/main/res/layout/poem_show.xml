@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView_poemname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="静夜思"
+        android:textColor="@android:color/background_dark"
+        android:textSize="@dimen/poemname_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.071" />
+
+    <TextView
+        android:id="@+id/textView_dynasty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="唐朝"
+        android:textColor="@android:color/background_dark"
+        android:textSize="@dimen/dynasty_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.485"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.126" />
+
+    <TextView
+        android:id="@+id/textView_author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="李白"
+        android:textColor="@android:color/background_dark"
+        android:textSize="@dimen/author_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.485"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.164" />
+
+    <TextView
+        android:id="@+id/textView_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="离离原上草，一岁一枯荣。\n 野火烧不尽，春风吹又生。\n 远芳侵古道，晴翠接荒城。\n 又送王孙去，萋萋满别情。"
+        android:textColor="@android:color/background_dark"
+        android:textSize="@dimen/poemname_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.247" />
+</androidx.constraintlayout.widget.ConstraintLayout>

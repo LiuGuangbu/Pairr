@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="poemday">18sp</dimen>
+    <dimen name="poemname_size">24sp</dimen>
+    <dimen name="dynasty_size">16sp</dimen>
+    <dimen name="author_size">15sp</dimen>
+</resources>
