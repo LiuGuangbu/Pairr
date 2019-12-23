@@ -1,10 +1,11 @@
+# coding:utf-8
 from flask import Flask
 import pymongo
 import json
 
 app = Flask(__name__)
 
-client=pymongo.MongoClient(host='120.24.216.203',port=27017)
+client=pymongo.MongoClient(host='39.97.250.70',port=27017)
 db=client.Pairr
 collection=db.PoemInfo
 
@@ -15,7 +16,7 @@ def serach(data_list,poem):
     content = poem.get("content")
     data_dict = {}
     data_dict.update({"poemname": poemname})
-    data_dict.update({"dynasty:": dynasty})
+    data_dict.update({"dynasty": dynasty})
     data_dict.update({"author": author})
     data_dict.update({"content": content})
     data_list.append(data_dict)

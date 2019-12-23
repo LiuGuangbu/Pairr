@@ -3,12 +3,12 @@ import xlrd
 import pymongo
 
 # 222.22.91.160
-client=pymongo.MongoClient(host='120.24.216.203',port=27017)
+client=pymongo.MongoClient(host='39.97.250.70',port=27017)
 db=client.Pairr
 collection=db.PoemInfo
 
 """python提取Excel数据"""
-data=xlrd.open_workbook(r'D:\Python\Pairr\2019-11-24.xlsx')
+data=xlrd.open_workbook(r'D:\Flask\数据上传\2019-12-22text.xlsx')
 table=data.sheets()[0]
 nrows=table.nrows
 print(nrows)
