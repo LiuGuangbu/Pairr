@@ -6,7 +6,7 @@ from pyhanlp import *
 
 BUFSIZE = 4096  #设置缓冲区大小
 tcpServerSocket = socket.socket()  # 1.创建
-hostip = '192.168.1.148'
+hostip = '192.168.1.181'
 port = 5000
 tcpServerSocket.bind((hostip, port))  # 2.bind
 tcpServerSocket.listen(10)  # 监听，设置等待队列最大数目
