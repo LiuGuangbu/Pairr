@@ -1,7 +1,7 @@
 import os
 
 from flask import Flask
-
+import flaskr.Server
 """
    存在问题！
    config.py
@@ -16,6 +16,7 @@ def create_app(test_config=None):
     else:
         app.config.from_mapping(test_config)
 
+
     try:
         os.makedirs(app.instance_path)
     except OSError:
@@ -27,3 +28,7 @@ def create_app(test_config=None):
     def hello():
         return "Hello,MY name is BuBu!"
     return app
+
+
+if __name__ == '__main__':
+    Server()

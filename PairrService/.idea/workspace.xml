@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0a416884-170b-44b6-b7f1-38046eddf07a" name="Default Changelist" comment="" />
+    <list default="true" id="0a416884-170b-44b6-b7f1-38046eddf07a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/webServers.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Pairr.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Pairr.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2019-11-20.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2019-11-21.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2019-11-24.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flaskr/Excel_MongoDB.py" beforeDir="false" afterPath="$PROJECT_DIR$/flaskr/Excel_MongoDB.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flaskr/Server.py" beforeDir="false" afterPath="$PROJECT_DIR$/flaskr/Server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flaskr/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/flaskr/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flaskr/mongoDB.py" beforeDir="false" afterPath="$PROJECT_DIR$/flaskr/mongoDB.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,43 +29,25 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/flaskr/Excel_MongoDB.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="4" column="25" lean-forward="true" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
-              <folding>
-                <element signature="e#0#11#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/flaskr/Server.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+            <state relative-caret-position="186">
+              <caret line="23" column="23" lean-forward="true" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
               <folding>
-                <element signature="e#0#13#0" expanded="true" />
+                <element signature="e#15#28#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/flaskr/config.py">
+        <entry file="file://$PROJECT_DIR$/flaskr/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="25">
-              <caret line="1" column="35" selection-start-line="1" selection-start-column="35" selection-end-line="1" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="4" selection-start-line="4" selection-end-line="4" />
+            <state relative-caret-position="837">
+              <caret line="34" selection-start-line="34" selection-end-line="34" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -58,10 +55,22 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/flaskr/mongoDB.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="500">
-              <caret line="22" selection-start-line="22" selection-end-line="22" />
+            <state relative-caret-position="-307">
+              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
               <folding>
-                <element signature="e#0#23#0" expanded="true" />
+                <element signature="e#15#38#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/flaskr/Excel_MongoDB.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="783">
+              <caret line="29" column="31" lean-forward="true" selection-start-line="29" selection-start-column="31" selection-end-line="29" selection-end-column="31" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -79,7 +88,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -97,26 +106,26 @@
         <option value="$PROJECT_DIR$/Main/mongoDB.py" />
         <option value="$PROJECT_DIR$/Main/Excel_MongoDB.py" />
         <option value="$PROJECT_DIR$/APP_factory.py" />
-        <option value="$PROJECT_DIR$/flaskr/__init__.py" />
         <option value="$PROJECT_DIR$/flaskr/auth.py" />
         <option value="$PROJECT_DIR$/flaskr/config.py" />
         <option value="$PROJECT_DIR$/flaskr/webSocket.py" />
         <option value="$PROJECT_DIR$/flaskr/Http.py" />
         <option value="$PROJECT_DIR$/flaskr/Serach.py" />
         <option value="$PROJECT_DIR$/flaskr/db.py" />
-        <option value="$PROJECT_DIR$/flaskr/Server.py" />
         <option value="$PROJECT_DIR$/flaskr/Cursor.py" />
         <option value="$PROJECT_DIR$/app.py" />
+        <option value="$PROJECT_DIR$/flaskr/__init__.py" />
+        <option value="$PROJECT_DIR$/flaskr/Server.py" />
         <option value="$PROJECT_DIR$/flaskr/mongoDB.py" />
         <option value="$PROJECT_DIR$/flaskr/Excel_MongoDB.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="665" />
-    <option name="y" value="75" />
-    <option name="width" value="1520" />
-    <option name="height" value="995" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="1967" />
+    <option name="y" value="-21" />
+    <option name="width" value="1346" />
+    <option name="height" value="740" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -129,8 +138,13 @@
         <subPane>
           <expand>
             <path>
-              <item name="Pairr" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Pairr" type="462c0819:PsiDirectoryNode" />
+              <item name="PairrService" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PairrService" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PairrService" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PairrService" type="462c0819:PsiDirectoryNode" />
+              <item name="flaskr" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -142,6 +156,11 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -221,6 +240,36 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="Flask (app.py)" type="Python.FlaskServer" temporary="true" nameIsGenerated="true">
+      <module name="Pairr" />
+      <option name="target" value="$PROJECT_DIR$/app.py" />
+      <option name="targetType" value="PATH" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Flask (flaskr/__init__.py)" type="Python.FlaskServer" temporary="true" nameIsGenerated="true">
+      <module name="Pairr" />
+      <option name="target" value="$PROJECT_DIR$/flaskr/__init__.py" />
+      <option name="targetType" value="PATH" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <method v="2" />
+    </configuration>
     <configuration name="Flask (flaskr/mongoDB.py)" type="Python.FlaskServer" temporary="true" nameIsGenerated="true">
       <module name="Pairr" />
       <option name="target" value="$PROJECT_DIR$/flaskr/mongoDB.py" />
@@ -254,14 +303,18 @@
     <list>
       <item itemvalue="Flask server.Pairr" />
       <item itemvalue="Flask server.Flask (flaskr/mongoDB.py)" />
+      <item itemvalue="Flask server.Flask (app.py)" />
+      <item itemvalue="Flask server.Flask (flaskr/__init__.py)" />
       <item itemvalue="Python.Server" />
       <item itemvalue="Python.Excel_MongoDB" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.Server" />
-        <item itemvalue="Flask server.Flask (flaskr/mongoDB.py)" />
         <item itemvalue="Python.Excel_MongoDB" />
+        <item itemvalue="Flask server.Flask (flaskr/__init__.py)" />
+        <item itemvalue="Flask server.Flask (flaskr/mongoDB.py)" />
+        <item itemvalue="Flask server.Flask (app.py)" />
       </list>
     </recent_temporary>
   </component>
@@ -312,11 +365,28 @@
       <workItem from="1574589058896" duration="1238000" />
       <workItem from="1574593659992" duration="105000" />
       <workItem from="1574594201319" duration="154000" />
+      <workItem from="1574596184269" duration="573000" />
+      <workItem from="1574598082576" duration="3696000" />
+      <workItem from="1574686269306" duration="251000" />
+      <workItem from="1574730318761" duration="5132000" />
+      <workItem from="1575182160919" duration="2183000" />
+      <workItem from="1575875270070" duration="5965000" />
+      <workItem from="1575963050910" duration="618000" />
+      <workItem from="1575984497490" duration="1307000" />
+      <workItem from="1576026484813" duration="6015000" />
+      <workItem from="1576069142438" duration="1295000" />
+      <workItem from="1576071946763" duration="3672000" />
+      <workItem from="1576144013291" duration="3002000" />
+      <workItem from="1576319692968" duration="100000" />
+      <workItem from="1576758078133" duration="139000" />
+      <workItem from="1576758959384" duration="605000" />
+      <workItem from="1576802191318" duration="5653000" />
+      <workItem from="1576991550292" duration="4497000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="83768000" />
+    <option name="totallyTimeSpent" value="128471000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -328,30 +398,31 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
+    <frame x="1912" y="-8" width="1616" height="886" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4979339" visible="true" weight="0.40884718" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4979339" visible="true" weight="0.23714653" />
       <window_info id="Structure" order="1" sideWeight="0.50206614" side_tool="true" weight="0.31949097" />
       <window_info id="Favorites" order="2" sideWeight="0.50206614" side_tool="true" weight="0.31949097" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.41018388" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39886847" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32904148" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.34512022" />
-      <window_info anchor="bottom" id="Python Console" order="12" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32845744" />
+      <window_info anchor="bottom" id="Python Console" order="2" weight="0.32978722" />
+      <window_info anchor="bottom" id="Run" order="3" weight="0.38031915" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.39886847" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="7" weight="0.32904148" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Database Changes" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="12" weight="0.34497207" />
+      <window_info anchor="bottom" id="File Transfer" order="13" weight="0.3444149" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="right" id="SciView" order="4" weight="0.3297587" />
+      <window_info anchor="right" id="Remote Host" order="5" weight="0.3297587" />
     </layout>
     <layout-to-restore>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4979339" visible="true" weight="0.3815261" />
@@ -387,39 +458,32 @@
     </ignored-roots>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Pairr$HanLP.coverage" NAME="HanLP Coverage Results" MODIFIED="1574060962019" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Pairr$Flask__Main_mongoDB_py_.coverage" NAME="Flask (Main/mongoDB.py) Coverage Results" MODIFIED="1574334372728" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/Pairr$Server__1_.coverage" NAME="Server (1) Coverage Results" MODIFIED="1574504429670" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/flaskr" />
-    <SUITE FILE_PATH="coverage/Pairr$Http.coverage" NAME="Http Coverage Results" MODIFIED="1574524733476" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/flaskr" />
-    <SUITE FILE_PATH="coverage/Pairr$Flask__mongoDB_py_.coverage" NAME="Flask (mongoDB.py) Coverage Results" MODIFIED="1574219174086" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/Pairr$Serach.coverage" NAME="Serach Coverage Results" MODIFIED="1574564352075" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/flaskr" />
     <SUITE FILE_PATH="coverage/Pairr$hanlp.coverage" NAME="hanlp Coverage Results" MODIFIED="1574254668929" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Main" />
+    <SUITE FILE_PATH="coverage/Pairr$HanLP.coverage" NAME="HanLP Coverage Results" MODIFIED="1574060962019" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/PairrService$Excel_MongoDB.coverage" NAME="Excel_MongoDB Coverage Results" MODIFIED="1577016488171" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/flaskr" />
+    <SUITE FILE_PATH="coverage/Pairr$Serach.coverage" NAME="Serach Coverage Results" MODIFIED="1574564352075" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/flaskr" />
     <SUITE FILE_PATH="coverage/Pairr$Flask__flaskr_db_py_.coverage" NAME="Flask (flaskr/mongoDB.py) Coverage Results" MODIFIED="1574569712495" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Pairr$Excel_MongoDB.coverage" NAME="Excel_MongoDB Coverage Results" MODIFIED="1574574688957" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/flaskr" />
-    <SUITE FILE_PATH="coverage/Pairr$Flask__serach_data_py_.coverage" NAME="Flask (serach_data.py) Coverage Results" MODIFIED="1574218849055" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/PairrService$Server.coverage" NAME="Server Coverage Results" MODIFIED="1577016502709" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/flaskr" />
     <SUITE FILE_PATH="coverage/Pairr$Flask__Main_URI_Demo_py_.coverage" NAME="Flask (Main/URI_Demo.py) Coverage Results" MODIFIED="1574334067437" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/Pairr$Flask__flaskr_mongoDB_py_.coverage" NAME="Flask (flaskr/mongoDB.py) Coverage Results" MODIFIED="1574584042590" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Pairr$Cursor.coverage" NAME="Cursor Coverage Results" MODIFIED="1574569628871" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/flaskr" />
-    <SUITE FILE_PATH="coverage/Pairr$Flask.coverage" NAME="Flask Coverage Results" MODIFIED="1574523476077" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/Pairr$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1574570992600" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/Pairr$Pairr.coverage" NAME="Pairr Coverage Results" MODIFIED="1574563834238" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Pairr$Flask__serach_data_py_.coverage" NAME="Flask (serach_data.py) Coverage Results" MODIFIED="1574218849055" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/Pairr$Flask.coverage" NAME="Flask Coverage Results" MODIFIED="1574523476077" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/Pairr$Server.coverage" NAME="Server Coverage Results" MODIFIED="1574594216557" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/flaskr" />
+    <SUITE FILE_PATH="coverage/PairrService$Flask__flaskr___init___py_.coverage" NAME="Flask (flaskr/__init__.py) Coverage Results" MODIFIED="1576076076959" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/Pairr$Cursor.coverage" NAME="Cursor Coverage Results" MODIFIED="1574569628871" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/flaskr" />
+    <SUITE FILE_PATH="coverage/Pairr$Http.coverage" NAME="Http Coverage Results" MODIFIED="1574524733476" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/flaskr" />
+    <SUITE FILE_PATH="coverage/PairrService$Flask__flaskr_mongoDB_py_.coverage" NAME="Flask (flaskr/mongoDB.py) Coverage Results" MODIFIED="1575887174206" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Pairr$Flask__Main_mongoDB_py_.coverage" NAME="Flask (Main/mongoDB.py) Coverage Results" MODIFIED="1574334372728" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/Pairr$Flask__flaskr_mongoDB_py_.coverage" NAME="Flask (flaskr/mongoDB.py) Coverage Results" MODIFIED="1574584042590" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Pairr$Excel_MongoDB.coverage" NAME="Excel_MongoDB Coverage Results" MODIFIED="1574574688957" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/flaskr" />
+    <SUITE FILE_PATH="coverage/PairrService$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1574686332135" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/Pairr$Server__1_.coverage" NAME="Server (1) Coverage Results" MODIFIED="1574504429670" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/flaskr" />
+    <SUITE FILE_PATH="coverage/Pairr$Pairr.coverage" NAME="Pairr Coverage Results" MODIFIED="1574563834238" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Pairr$Flask__mongoDB_py_.coverage" NAME="Flask (mongoDB.py) Coverage Results" MODIFIED="1574219174086" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../Lib/json/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="182" column="4" selection-start-line="182" selection-start-column="4" selection-end-line="182" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Flask/myproject/venv/Lib/site-packages/flask/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="59650">
-          <caret line="2445" selection-start-line="2445" selection-end-line="2445" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../Lib/json/__init__.py" />
+    <entry file="file://$PROJECT_DIR$/../Flask/myproject/venv/Lib/site-packages/flask/app.py" />
     <entry file="file://$PROJECT_DIR$/venv/HanLp.py" />
     <entry file="file://$PROJECT_DIR$/.gitattributes" />
     <entry file="file://$PROJECT_DIR$/HanLP.py" />
@@ -432,26 +496,6 @@
     <entry file="file://$PROJECT_DIR$/flaskr/URI_Demo.py" />
     <entry file="file://$PROJECT_DIR$/APP_factory.py" />
     <entry file="file://$PROJECT_DIR$/flaskr/webSocket.py" />
-    <entry file="file://$PROJECT_DIR$/flaskr/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flaskr/auth.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-          <folding>
-            <element signature="e#0#16#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -459,77 +503,73 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../Flask/myproject/venv/Lib/site-packages/pymongo/topology.py" />
+    <entry file="file://$PROJECT_DIR$/../Flask/myproject/venv/Lib/site-packages/pymongo/mongo_client.py" />
+    <entry file="file://$PROJECT_DIR$/flaskr/Serach.py" />
+    <entry file="file://$PROJECT_DIR$/flaskr/Http.py" />
+    <entry file="file://$PROJECT_DIR$/flaskr/Cursor.py" />
+    <entry file="file://$PROJECT_DIR$/../Flask/myproject/venv/Lib/site-packages/xlrd/__init__.py" />
+    <entry file="file://$PROJECT_DIR$/app.py" />
+    <entry file="file://$PROJECT_DIR$/flaskr/auth.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flaskr/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="1" column="35" selection-start-line="1" selection-start-column="35" selection-end-line="1" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/Pairr.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
+        <state relative-caret-position="297">
           <caret line="11" column="54" selection-start-line="11" selection-start-column="54" selection-end-line="11" selection-end-column="54" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Flask/myproject/venv/Lib/site-packages/pymongo/topology.py">
+    <entry file="file://$PROJECT_DIR$/flaskr/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="204" selection-start-line="204" selection-end-line="204" />
+        <state relative-caret-position="837">
+          <caret line="34" selection-start-line="34" selection-end-line="34" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Flask/myproject/venv/Lib/site-packages/pymongo/mongo_client.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="1792" column="50" lean-forward="true" selection-start-line="1792" selection-start-column="50" selection-end-line="1792" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flaskr/Serach.py" />
-    <entry file="file://$PROJECT_DIR$/flaskr/Http.py" />
-    <entry file="file://$PROJECT_DIR$/flaskr/Cursor.py" />
-    <entry file="file://$PROJECT_DIR$/../Flask/myproject/venv/Lib/site-packages/xlrd/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="34" column="30" lean-forward="true" selection-start-line="34" selection-start-column="30" selection-end-line="34" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/flaskr/log.txt">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/flaskr/mongoDB.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        <state relative-caret-position="-307">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
           <folding>
-            <element signature="e#0#23#0" expanded="true" />
+            <element signature="e#15#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flaskr/Excel_MongoDB.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="783">
+          <caret line="29" column="31" lean-forward="true" selection-start-line="29" selection-start-column="31" selection-end-line="29" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/flaskr/Server.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+        <state relative-caret-position="186">
+          <caret line="23" column="23" lean-forward="true" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
           <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flaskr/config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="1" column="35" selection-start-line="1" selection-start-column="35" selection-end-line="1" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flaskr/Excel_MongoDB.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="4" column="25" lean-forward="true" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#15#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
