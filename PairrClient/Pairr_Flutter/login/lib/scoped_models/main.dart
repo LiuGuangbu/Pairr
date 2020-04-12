@@ -1,4 +1,30 @@
 import 'package:scoped_model/scoped_model.dart';
+class global{
+  static String _searchValue ="";
+  static bool _switchValue=false;
+  static String _ThemeValue = "white";
+  static setSearchV(String search){
+    _searchValue = search;
+    return _searchValue;
+  }
+  static getSearchV(){
+    return _searchValue;
+  }
+  static getSwitchV(){
+    return _switchValue;
+  }
+  static setSwitchV(bool _bool){
+    _switchValue = _bool;
+    return _switchValue;
+  }
+  static setThemeV( String string){
+    _ThemeValue = string;
+    return _ThemeValue;
+  }
+  static getThemeV(){
+    return _ThemeValue;
+  }
+}
 
 class MainModel extends Model {
   String _usernumber="";//用户号码

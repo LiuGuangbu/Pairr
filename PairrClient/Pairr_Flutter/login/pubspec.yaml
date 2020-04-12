@@ -14,7 +14,7 @@ description: A new Flutter application.
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.2.0 <3.0.0"
+  sdk: ">=2.2.2 <3.0.0"
 
 dependencies:
   flutter:
@@ -23,6 +23,7 @@ dependencies:
   flutter_swiper : ^1.1.6
   shared_preferences: ^0.5.4+8
   scoped_model: ^1.0.1
+  http: ^0.12.0+4
   cupertino_icons: ^0.1.2
   font_awesome_flutter: ^8.7.0
   cached_network_image: ^1.1.3

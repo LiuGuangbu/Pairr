@@ -1,9 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:login/Pages/BottonAppBar/UserPage/User_setting.dart';
 import 'package:login/Pages/BottonAppBar/UserPage/noLogonSetting.dart';
-import 'package:login/Pages/Poem_page/poem_Show.dart';
 import 'package:login/Pages/BottonAppBar/UserPage/settingMain.dart';
+import 'package:login/scoped_models/Adapt.dart';
 import 'package:login/scoped_models/ConfigProvide.dart';
 import 'package:login/scoped_models/main.dart';
 import 'package:scoped_model/scoped_model.dart';
@@ -27,14 +26,40 @@ class MinePage extends StatelessWidget{
   }
   
 }
-class LogonMain extends StatelessWidget{
+class LogonMain extends StatefulWidget{
+  @override
+  State<StatefulWidget> createState() {
+    // TODO: implement createState
+    return _LogonMain();
+  }
+
+}
+class _LogonMain extends State<LogonMain>{
+  String _ThemeValue = global.getThemeV();
+  void _switchColor(){
+    setState(() {
+      if(global.getSwitchV() ==true){
+        Provide.value<ConfigProvide>(context).$setTheme('deepblack');
+        //global.setThemeV(string)
+      }else{
+        Provide.value<ConfigProvide>(context).$setTheme(_ThemeValue);
+      }
+    });
+  }//夜间模式状态
+  @override
+  void setState(fn) {
+    _ThemeValue = global.getThemeV();
+    // TODO: implement setState
+    super.setState(fn);
+  }
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
     return ScopedModelDescendant<MainModel>(
         builder: (BuildContext context, Widget child, MainModel model){
             return Scaffold(
-               appBar: AppBar(title: Row(
+               appBar: AppBar(
+                   title: Row(
           // mainAxisAlignment: ,
           children: <Widget>[
                  new Expanded(child: new Container(
@@ -42,6 +67,7 @@ class LogonMain extends StatelessWidget{
                    child: Text('我')),),
                  IconButton(
                   icon: Icon(Icons.settings),
+              color: Theme.of(context).accentColor ,
               onPressed: (){
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => SettingPage()));
@@ -57,11 +83,7 @@ class LogonMain extends StatelessWidget{
                 new ListView(
             children: <Widget>[
                   new Container(
-                decoration: BoxDecoration(border: Border(bottom: BorderSide(width: 25,color: Color(0xffe5e5e5))),),
-                //child: logoning(),
-              ),
-                  new Container(
-                decoration: BoxDecoration(border: Border(bottom: BorderSide(width: 25,color: Color(0xffe5e5e5))),),
+                decoration: BoxDecoration(border: Border(bottom: BorderSide(width: Adapt.px(18),color: Theme.of(context).dividerColor)),),
                     child: Container(
                       child: GestureDetector(
                     onTap: (){
@@ -129,7 +151,7 @@ class LogonMain extends StatelessWidget{
                 ),
               ),
                    new Container(
-                decoration: BoxDecoration(border: Border(bottom: BorderSide(width: 1,color: Color(0xffe5e5e5))),),
+                decoration: BoxDecoration(border: Border(bottom: BorderSide(width: Adapt.px(18),color: Theme.of(context).dividerColor)),),
                      child:  ListTile(
                       title: Text('收藏',style: TextStyle(fontSize: 18),),
                   //   leading: Icon(Icons.build),
@@ -139,7 +161,7 @@ class LogonMain extends StatelessWidget{
                 ),
               ),
                    new Container(
-                decoration: BoxDecoration(border: Border(bottom: BorderSide(width: 1,color: Color(0xffe5e5e5))),),
+                decoration: BoxDecoration(border: Border(bottom: BorderSide(width: Adapt.px(18),color: Theme.of(context).dividerColor)),),
                      child:  ListTile(
                       title: Text('随记',style: TextStyle(fontSize: 18),),
                   //   leading: Icon(Icons.build),
@@ -149,7 +171,7 @@ class LogonMain extends StatelessWidget{
                 ),
               ),
               new Container(
-                decoration: BoxDecoration(border: Border(bottom: BorderSide(width: 1,color: Color(0xffe5e5e5))),),
+                decoration: BoxDecoration(border: Border(bottom: BorderSide(width: Adapt.px(18),color: Theme.of(context).dividerColor)),),
                 child:  ListTile(
                   title: Text('创作',style: TextStyle(fontSize: 18),),
                   //   leading: Icon(Icons.build),
@@ -159,7 +181,7 @@ class LogonMain extends StatelessWidget{
                 ),
               ),
               new Container(
-                decoration: BoxDecoration(border: Border(bottom: BorderSide(width: 20,color: Color(0xffe5e5e5))),),
+                decoration: BoxDecoration(border: Border(bottom: BorderSide(width: Adapt.px(18),color: Theme.of(context).dividerColor)),),
                 child:  ListTile(
                   title: Text('分享',style: TextStyle(fontSize: 18),),
                   //   leading: Icon(Icons.build),
@@ -169,7 +191,7 @@ class LogonMain extends StatelessWidget{
                 ),
               ),
                   new Container(
-                decoration: BoxDecoration(border: Border(bottom: BorderSide(width: 1,color: Color(0xffe5e5e5))),),
+                decoration: BoxDecoration(border: Border(bottom: BorderSide(width: Adapt.px(18),color: Theme.of(context).dividerColor)),),
                     child:  ListTile(
                      title: Text('通知',style: TextStyle(fontSize: 18),),
                   //   leading: Icon(Icons.build),
@@ -187,7 +209,7 @@ class LogonMain extends StatelessWidget{
                 ),
               ),
                   new Container(
-                decoration: BoxDecoration(border: Border(bottom: BorderSide(width: 20,color: Color(0xffe5e5e5))),),
+                decoration: BoxDecoration(border: Border(bottom: BorderSide(width: Adapt.px(18),color: Theme.of(context).dividerColor)),),
                     child:  ListTile(
                      title: Text('推荐',style: TextStyle(fontSize: 18),),
                   //   leading: Icon(Icons.build),
@@ -196,19 +218,40 @@ class LogonMain extends StatelessWidget{
                   },
                 ),
               ),
-                 new Container(
-                decoration: BoxDecoration(border: Border(bottom: BorderSide(width: 20,color: Color(0xffe5e5e5))),),
-                  child:  ListTile(
-                   title: Text('夜间模式',style: TextStyle(fontSize: 18),),
+              new Container(
+                decoration: BoxDecoration(border: Border(bottom: BorderSide(width: Adapt.px(18),color: Theme.of(context).dividerColor)),),
+                child:  ListTile(
+                  title: Text('夜间模式',style: TextStyle(
+                      color: Theme.of(context).accentColor ,
+                      fontSize:Adapt.px(30)),),
                   //   leading: Icon(Icons.build),
-                   trailing: Icon(Icons.arrow_forward_ios),
-                  onTap: () {
-                    Provide.value<ConfigProvide>(context).$setTheme('deepblack');
+                  trailing:
+                  CupertinoSwitch(
+                    value: global.getSwitchV(),
+                    onChanged: (bool value){
+                      setState((){
+                        global.setSwitchV(!global.getSwitchV()) ;
+                        _switchColor();
+                        print('夜间模式状态是${global.getSwitchV()}');
+
+
+                        //model.updateSwitchValue(true);
+                      });
+                    },
+                  ),
+                  onTap: (){
+                    setState(() {
+                      global.setSwitchV(!global.getSwitchV()) ;
+                      _switchColor();
+                      print('夜间模式状态是${global.getSwitchV()}');
+                      // model.updateSwitchValue(_switchValue);
+                    });
                   },
+
                 ),
               ),
                  new Container(
-                decoration: BoxDecoration(border: Border(bottom: BorderSide(width: 1,color: Color(0xffe5e5e5))),),
+                decoration: BoxDecoration(border: Border(bottom: BorderSide(width: Adapt.px(1),color: Theme.of(context).dividerColor)),),
                   child:  ListTile(
                    title: Text('会员中心',style: TextStyle(fontSize: 18),),
                   //   leading: Icon(Icons.build),
@@ -218,7 +261,7 @@ class LogonMain extends StatelessWidget{
                 ),
               ),
                   new Container(
-                 decoration: BoxDecoration(border: Border(bottom: BorderSide(width: 20,color: Color(0xffe5e5e5))),),
+                 decoration: BoxDecoration(border: Border(bottom: BorderSide(width: Adapt.px(18),color: Theme.of(context).dividerColor)),),
                    child:  ListTile(
                     title: Text('我的钱包',style: TextStyle(fontSize: 18),),
                   //   leading: Icon(Icons.build),
@@ -229,7 +272,7 @@ class LogonMain extends StatelessWidget{
               ),
                   new Container(
 
-                decoration: BoxDecoration(border: Border(bottom: BorderSide(width: 20,color: Color(0xffe5e5e5))),),
+                decoration: BoxDecoration(border: Border(bottom: BorderSide(width: Adapt.px(18),color: Theme.of(context).dividerColor)),),
                    child:  ListTile(
                     title: Text('关于我们',style: TextStyle(fontSize: 18),),
                     //   leading: Icon(Icons.build),
@@ -267,27 +310,23 @@ class NoLogonMain extends StatefulWidget{
 }
 class _NoLogonMain extends State<NoLogonMain>{
 
-
-  bool _switchValue=false ;
+  String _ThemeValue = global.getThemeV();
   void _switchColor(){
     setState(() {
-      if(_switchValue ==true){
+      if(global.getSwitchV() ==true){
         Provide.value<ConfigProvide>(context).$setTheme('deepblack');
-        print(Provide.value<ConfigProvide>(context).$setTheme('deepblack'));
-
+        //global.setThemeV(string)
       }else{
-        Provide.value<ConfigProvide>(context).$setTheme('white');
-
+        Provide.value<ConfigProvide>(context).$setTheme(_ThemeValue);
       }
     });
   }//夜间模式状态
   @override
   void setState(fn) {
+    _ThemeValue = global.getThemeV();
     // TODO: implement setState
     super.setState(fn);
-
   }
-
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -295,17 +334,20 @@ class _NoLogonMain extends State<NoLogonMain>{
         builder: (BuildContext context, Widget child, MainModel model){
         //  _switchValue =model.switchValue;
           return Scaffold(
-           appBar: AppBar(title: Row(
+           appBar: AppBar(
+
+               title: Row(
           // mainAxisAlignment: ,
           children: <Widget>[
             new Expanded(child: new Container(
                 alignment: Alignment.center,
                 child: Text('我',style: TextStyle(color: Theme.of(context).accentColor ,),),),),
-            IconButton(
-              icon: Icon(Icons.settings),
-              onPressed: (){
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => noLogonSetting()));
+                 IconButton(
+                   icon: Icon(Icons.settings),
+                   color: Theme.of(context).accentColor ,
+                   onPressed: (){
+                    Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => noLogonSetting()));
               },
             )
           ],)),
@@ -317,12 +359,9 @@ class _NoLogonMain extends State<NoLogonMain>{
           child:
           new ListView(
             children: <Widget>[
+
               new Container(
-                decoration: BoxDecoration(border: Border(bottom: BorderSide(width: 25,color: Color(0xffe5e5e5))),),
-                //child: logoning(),
-              ),
-              new Container(
-                decoration: BoxDecoration(border: Border(bottom: BorderSide(width: 25,color: Color(0xffe5e5e5))),),
+                decoration: BoxDecoration(border: Border(bottom: BorderSide(width: Adapt.px(18),color: Theme.of(context).dividerColor)),),
                 child: Container(
                   child: GestureDetector(
                     onTap: (){
@@ -331,11 +370,11 @@ class _NoLogonMain extends State<NoLogonMain>{
                     },
                     child: Container(
                       alignment: Alignment.center,
-                      padding: EdgeInsets.fromLTRB(15, 15, 0, 15),
+                      padding: EdgeInsets.fromLTRB(Adapt.px(15), Adapt.px(15), 0, Adapt.px(15)),
                       child: Row(
                         children: <Widget>[
                           Container(
-                              width: 100,
+                              width:100,
                               height: 100,
                               decoration: ShapeDecoration(
                                   shape: RoundedRectangleBorder(
@@ -348,8 +387,11 @@ class _NoLogonMain extends State<NoLogonMain>{
                               )
                           ),
                           new Expanded(child: Container(
-                            padding: EdgeInsets.fromLTRB(20, 0, 0, 0),
-                            child: Text('登录/注册',style: TextStyle(fontSize: 20),),
+                            padding: EdgeInsets.fromLTRB(Adapt.px(15), 0, 0, 0),
+                            child: Text('登录/注册',
+                              style: TextStyle(
+                                color: Theme.of(context).accentColor ,
+                                fontSize: Adapt.px(30)),),
                           )
                           ),
                           new Container(
@@ -358,7 +400,7 @@ class _NoLogonMain extends State<NoLogonMain>{
                                 Navigator.push(context,
                                     MaterialPageRoute(builder: (context) => LoginPage()));
                               },
-                              icon: Icon(Icons.arrow_forward_ios),
+                              icon: Icon(Icons.arrow_forward_ios,color:Theme.of(context).accentColor ,),
                             ),
                           )
                         ],
@@ -369,11 +411,13 @@ class _NoLogonMain extends State<NoLogonMain>{
                 ),
               ),
               new Container(
-                decoration: BoxDecoration(border: Border(bottom: BorderSide(width: 1,color: Color(0xffe5e5e5))),),
+                decoration: BoxDecoration(border: Border(bottom: BorderSide(width: Adapt.px(1),color: Theme.of(context).dividerColor)),),
                   child:  ListTile(
-                  title: Text('通知',style: TextStyle(fontSize: 18),),
+                  title: Text('通知',style: TextStyle(
+                      color: Theme.of(context).accentColor ,
+                      fontSize: Adapt.px(30)),),
                   //   leading: Icon(Icons.build),
-                  trailing: Icon(Icons.arrow_forward_ios),
+                  trailing: Icon(Icons.arrow_forward_ios,color:Theme.of(context).accentColor ,),
                   onTap: () {
                     //跳出提示框
 //              showDialog(
@@ -387,28 +431,32 @@ class _NoLogonMain extends State<NoLogonMain>{
                 ),
               ),
               new Container(
-                decoration: BoxDecoration(border: Border(bottom: BorderSide(width: 20,color: Color(0xffe5e5e5))),),
+                decoration: BoxDecoration(border: Border(bottom: BorderSide(width: Adapt.px(18),color: Theme.of(context).dividerColor)),),
                 child:  ListTile(
-                  title: Text('推荐',style: TextStyle(fontSize: 18),),
+                  title: Text('推荐',style: TextStyle(
+                      color: Theme.of(context).accentColor ,
+                      fontSize:Adapt.px(30)),),
                   //   leading: Icon(Icons.build),
-                  trailing: Icon(Icons.arrow_forward_ios),
+                  trailing: Icon(Icons.arrow_forward_ios,color:Theme.of(context).accentColor ,),
                   onTap: () {
                   },
                 ),
               ),
               new Container(
-                decoration: BoxDecoration(border: Border(bottom: BorderSide(width: 20,color: Color(0xffe5e5e5))),),
+                decoration: BoxDecoration(border: Border(bottom: BorderSide(width: Adapt.px(18),color: Theme.of(context).dividerColor)),),
                 child:  ListTile(
-                  title: Text('夜间模式',style: TextStyle(fontSize: 18),),
+                  title: Text('夜间模式',style: TextStyle(
+                      color: Theme.of(context).accentColor ,
+                      fontSize:Adapt.px(30)),),
                   //   leading: Icon(Icons.build),
                   trailing:
                   CupertinoSwitch(
-                    value: _switchValue,
+                    value: global.getSwitchV(),
                     onChanged: (bool value){
                       setState((){
-                        _switchValue =!_switchValue;
+                        global.setSwitchV(!global.getSwitchV()) ;
                         _switchColor();
-                        print('夜间模式状态是$_switchValue');
+                        print('夜间模式状态是${global.getSwitchV()}');
 
 
                         //model.updateSwitchValue(true);
@@ -417,7 +465,9 @@ class _NoLogonMain extends State<NoLogonMain>{
                   ),
                   onTap: (){
                     setState(() {
-                      _switchValue =!_switchValue;
+                      global.setSwitchV(!global.getSwitchV()) ;
+                      _switchColor();
+                      print('夜间模式状态是${global.getSwitchV()}');
                      // model.updateSwitchValue(_switchValue);
                     });
                   },
@@ -425,32 +475,38 @@ class _NoLogonMain extends State<NoLogonMain>{
                 ),
               ),
               new Container(
-                decoration: BoxDecoration(border: Border(bottom: BorderSide(width: 1,color: Color(0xffe5e5e5))),),
+                decoration: BoxDecoration(border: Border(bottom: BorderSide(width: Adapt.px(18),color: Theme.of(context).dividerColor)),),
                 child:  ListTile(
-                  title: Text('会员中心',style: TextStyle(fontSize: 18),),
+                  title: Text('会员中心',style: TextStyle(
+                      color: Theme.of(context).accentColor ,
+                      fontSize:Adapt.px(30)),),
                   //   leading: Icon(Icons.build),
-                  trailing: Icon(Icons.arrow_forward_ios),
+                  trailing: Icon(Icons.arrow_forward_ios,color:Theme.of(context).accentColor ,),
                   onTap: () {
                   },
                 ),
               ),
               new Container(
-                decoration: BoxDecoration(border: Border(bottom: BorderSide(width: 20,color: Color(0xffe5e5e5))),),
+                decoration: BoxDecoration(border: Border(bottom: BorderSide(width: Adapt.px(18),color: Theme.of(context).dividerColor)),),
                 child:  ListTile(
-                  title: Text('我的钱包',style: TextStyle(fontSize: 18),),
+                  title: Text('我的钱包',style: TextStyle(
+                      color: Theme.of(context).accentColor ,
+                      fontSize:Adapt.px(30)),),
                   //   leading: Icon(Icons.build),
-                  trailing: Icon(Icons.arrow_forward_ios),
+                  trailing: Icon(Icons.arrow_forward_ios,color:Theme.of(context).accentColor ,),
                   onTap: () {
                   },
                 ),
               ),
               new Container(
 
-                decoration: BoxDecoration(border: Border(bottom: BorderSide(width: 20,color: Color(0xffe5e5e5))),),
+                decoration: BoxDecoration(border: Border(bottom: BorderSide(width: Adapt.px(18),color: Theme.of(context).dividerColor)),),
                 child:  ListTile(
-                  title: Text('关于我们',style: TextStyle(fontSize: 18),),
+                  title: Text('关于我们',style: TextStyle(
+                      color: Theme.of(context).accentColor ,
+                      fontSize:Adapt.px(30)),),
                   //   leading: Icon(Icons.build),
-                  trailing: Icon(Icons.arrow_forward_ios),
+                  trailing: Icon(Icons.arrow_forward_ios,color:Theme.of(context).accentColor ,),
                   onTap: () {
                   },
                 ),

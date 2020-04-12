@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:login/scoped_models/LocalStorage.dart';
+import 'package:login/scoped_models/main.dart';
 import 'package:provide/provide.dart';
 export 'package:provide/provide.dart';  // 暴露Provider方法,不写此句也可在其他页面再次import
 
@@ -17,6 +18,7 @@ class ConfigProvide with ChangeNotifier {
   Future $getTheme() async {
     String _theme = await LocalStorage.get('theme');
     print('++++++++++++++++++++');
+    global.setThemeV(_theme);
     print(_theme);
     if (_theme != null) {
       $setTheme(_theme);

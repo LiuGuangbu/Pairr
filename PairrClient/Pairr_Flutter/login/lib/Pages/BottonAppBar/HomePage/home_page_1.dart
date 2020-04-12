@@ -3,6 +3,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:login/Pages/Poem_page/add_Poem.dart';
+import 'package:login/scoped_models/Adapt.dart';
 import 'package:login/scoped_models/vertical_text.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -26,12 +27,10 @@ class _AppBarDemoPageState extends State<AppBarDemoPage> {
 
   }
 
-  double text_Size = 17.0;
+  //double text_Size = 17.0;
   @override
   Widget build(BuildContext context) {
-    return DefaultTabController(
-      length:2 ,
-      child: Scaffold(
+    return Scaffold(
         appBar: AppBar(
           //title:Text("AppBarDemoPage"),
           // backgroundColor: Colors.red,
@@ -40,31 +39,20 @@ class _AppBarDemoPageState extends State<AppBarDemoPage> {
           title: Row(
             children: <Widget>[
               new Expanded(
-                  child:  TabBar(
-                    indicatorColor: Theme.of(context).primaryColorLight,//底部指示器的颜色
-                    indicatorSize: TabBarIndicatorSize.label,//指示器大小计算方式
-                    labelColor: Theme.of(context).primaryColorLight,//选中颜色
-                    unselectedLabelColor: Theme.of(context).accentColor,//未选中颜色
-                    labelStyle: TextStyle(fontFamily: text_Family,fontSize: text_Size+3.0),//选中样式
-                    unselectedLabelStyle: TextStyle(fontFamily: text_Family,fontSize: text_Size ),
-                    tabs: <Widget>[
-                      Tab(text: "孟诗韩笔",) ,
-                      Tab(text: "飞花令")
-                    ],
-                  ),
+                  child:  Container(child: null,)
               ),
 
               IconButton(
                 onPressed: (){},
                 icon:
-                Icon(Icons.favorite_border,size: 35,
+                Icon(Icons.favorite_border,size: Adapt.px(45),
                   color: Theme.of(context).accentColor ,
                 ),
               ),
               IconButton(
                 onPressed: (){},
                 icon:
-                Icon(Icons.launch,size: 35,
+                Icon(Icons.launch,size: Adapt.px(45),
                   color: Theme.of(context).accentColor ,
                 ),
               ),
@@ -72,6 +60,7 @@ class _AppBarDemoPageState extends State<AppBarDemoPage> {
 
             ],
           ),
+
           actions: <Widget>[
             /*
           下面是一个弹出菜单按钮，包含两个属性点击属性和弹出菜单子项的建立
@@ -98,7 +87,7 @@ class _AppBarDemoPageState extends State<AppBarDemoPage> {
                                 children: <Widget>[
                                   ListTile(
                                     subtitle: Text('系统字体'),
-                                    title:Text('品味中国文化之美',style: TextStyle(fontSize: this.text_Size,),) ,
+                                    title:Text('品味中国文化之美',style: TextStyle(fontSize:Adapt.px(20),),) ,
                                    trailing: RaisedButton(
                                     onPressed: (){
                                       var _text='';
@@ -116,7 +105,7 @@ class _AppBarDemoPageState extends State<AppBarDemoPage> {
                                   ),
                                   ListTile(
                                     subtitle: Text('毛泽东书法字体'),
-                                    title:Text('品味中国文化之美',style: TextStyle(fontFamily:'MaoZedong',fontSize: this.text_Size,),) ,
+                                    title:Text('品味中国文化之美',style: TextStyle(fontFamily:'MaoZedong',fontSize: Adapt.px(20),),) ,
                                     trailing: RaisedButton(
                                       onPressed:(){
                                         var _text='MaoZedong';
@@ -137,7 +126,7 @@ class _AppBarDemoPageState extends State<AppBarDemoPage> {
                                   ),
                                   ListTile(
                                     subtitle: Text('华文行楷简体字体'),
-                                    title:Text('品味中国文化之美',style: TextStyle(fontFamily:'HuawenXingkai',fontSize: this.text_Size,),) ,
+                                    title:Text('品味中国文化之美',style: TextStyle(fontFamily:'HuawenXingkai',fontSize:Adapt.px(30),),) ,
                                     trailing: RaisedButton(
                                       onPressed: (){
                                         var _text='HuawenXingkai';
@@ -155,7 +144,7 @@ class _AppBarDemoPageState extends State<AppBarDemoPage> {
                                   ),
                                   ListTile(
                                     subtitle: Text('方正舒体简体'),
-                                    title:Text('品味中国文化之美',style: TextStyle(fontFamily:'FangzhengShuti',fontSize: this.text_Size,),) ,
+                                    title:Text('品味中国文化之美',style: TextStyle(fontFamily:'FangzhengShuti',fontSize: Adapt.px(30),),) ,
                                     trailing: RaisedButton(
                                       onPressed: (){
                                         var _text='FangzhengShuti';
@@ -194,13 +183,6 @@ class _AppBarDemoPageState extends State<AppBarDemoPage> {
                       trailing: Icon(Icons.keyboard_arrow_right),
                       onTap:(){},
                     ),
-//                    child: new Row(
-//                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-//                      children: <Widget>[
-//                        new Text('增加'),
-//                        new Icon(Icons.remove_circle)
-//                      ],
-//                    ),
                   )
                 ])
           ],
@@ -208,27 +190,9 @@ class _AppBarDemoPageState extends State<AppBarDemoPage> {
 
 
         ),
-        body: TabBarView(
-          children: <Widget>[
-            home_Page(text_Family_Poem:text_Family_Poem ),
-            ListView(
-              children: <Widget>[
-
-                ListTile(
-                    title:Text("第二个tab")
-                ),
-                ListTile(
-                    title:Text("第二个tab")
-                ),
-                ListTile(
-                    title:Text("第二个tab")
-                )
-              ],
-            )
-          ],
-        ),
-      ),
-    );
+        body: home_Page(text_Family_Poem:text_Family_Poem ),
+      )
+    ;
   }
 }
 
@@ -261,23 +225,17 @@ class home_Page extends StatelessWidget{
                 padding: EdgeInsets.fromLTRB(30, 50, 30, 50),
                 //decoration: BoxDecoration(color: Theme.of(context).accentColor,),
                 child:Card(
+
                     margin: EdgeInsets.all(10),
                     child: GestureDetector(
                       child: Container(
-//                        decoration: BoxDecoration(
-//                            color: Colors.red,
-//                            image: DecorationImage(
-//                            //  image: AssetImage(this.ImageURL),
-//                             // fit: BoxFit.fill,
-//                            )
-//                        ),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
                             Container(
-                             color: Colors.black12,
-                              width: 100,
-                              height: 600,
+                            // color: Colors.black12,
+                              width: Adapt.px(100),
+                              height:  Adapt.px(600),
                               child: CustomPaint(
                                 painter: VerticalText(
                                   text: "你好，这是垂直排版的文字，排版顺序从上到下，从右到左。😊😂😄",
@@ -285,18 +243,18 @@ class home_Page extends StatelessWidget{
                                       fontFamily: this.text_Family_Poem,
                                       // fontFamily: 'MaoZedong',
                                       color: Colors.black,
-                                      fontSize: 30,
+                                      fontSize:  Adapt.px(30),
                                       letterSpacing: 4,
                                       wordSpacing: 4),
-                                  width: 100,
-                                  height: 500,
+                                  width:  Adapt.px(100),
+                                  height:  Adapt.px(500),
                                 ),
                               ),
                             ),
                             Container(
                              // color: Colors.black12,
-                              width: 100,
-                              height: 600,
+                              width:  Adapt.px(100),
+                              height:  Adapt.px(600),
                               child: CustomPaint(
                                 painter: VerticalText(
                                   text: poems_list[index].poem_text,
@@ -304,30 +262,11 @@ class home_Page extends StatelessWidget{
                                       fontFamily: this.text_Family_Poem,
                                       // fontFamily: 'MaoZedong',
                                       color: Colors.black,
-                                      fontSize: 30,
+                                      fontSize:  Adapt.px(30),
                                       letterSpacing: 4,
                                       wordSpacing: 4),
                                   width: 100,
                                   height: 500,
-                                ),
-                              ),
-                            ),
-                            Container(
-                            //  color: Colors.black12,
-                              width: 100,
-                              height: 600,
-                              child: CustomPaint(
-                                painter: VerticalText(
-                                  text: poems_list[index].poem_title,
-                                  textStyle: TextStyle(
-                                      fontFamily: this.text_Family_Poem,
-                                      // fontFamily: 'MaoZedong',
-                                      color: Colors.black,
-                                      fontSize: 30,
-                                      letterSpacing: 4,
-                                      wordSpacing: 4),
-                                  width: 100,
-                                  height: 600,
                                 ),
                               ),
                             ),

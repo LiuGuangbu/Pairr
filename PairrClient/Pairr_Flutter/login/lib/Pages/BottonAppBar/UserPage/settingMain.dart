@@ -16,7 +16,12 @@ class SettingPage extends StatelessWidget{
     return ScopedModelDescendant<MainModel>(
         builder: (BuildContext context, Widget child, MainModel model){
       return Scaffold(
-      appBar: AppBar(title: Text('设置',),
+      appBar: AppBar(
+        leading: new IconButton(
+          icon: new Icon(Icons.arrow_back_ios, color: Theme.of(context).accentColor ,),
+          onPressed: () => Navigator.of(context).pop(),
+        ),
+        title: Text('设置',),
         centerTitle: true,//居中设置
       ),
       body: new ListView(

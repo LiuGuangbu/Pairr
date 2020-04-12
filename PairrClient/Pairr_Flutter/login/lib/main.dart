@@ -1,6 +1,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:login/scoped_models/Adapt.dart';
 import 'package:login/scoped_models/ConfigProvide.dart';
 import 'package:login/scoped_models/ConfigProvide.dart' as prefix0;
 import 'package:login/scoped_models/theme.dart';
@@ -11,9 +13,7 @@ import 'package:login/Pages/BottonAppBar/UserPage/mineMain.dart';
 import 'package:login/Pages/BottonAppBar/Write_more_Page/newsMain.dart';
 import 'package:login/Pages/BottonAppBar/HomePage/home_page_1.dart';
 import 'package:login/scoped_models/main.dart';
-//void main() {
-//  runApp(MyApp());
-//}
+
 void main() async {
   runApp(ProviderNode(child: MyApp(), providers: providers));  //将状态放入顶层
 }
@@ -21,6 +21,7 @@ void main() async {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+
     Provide.value<ConfigProvide>(context).$getTheme();  //修改当前主题
     final MainModel _model = MainModel();//用户全局变量控制
     return Provide<ConfigProvide>(// 使用主题
@@ -31,12 +32,6 @@ class MyApp extends StatelessWidget {
              debugShowCheckedModeBanner: false,  //调试显示检查模式横幅
            //  onGenerateRoute: Routes.router.generator, //生成路由
              theme: AppTheme.getThemeData(configProvide.theme),
-//                theme:new ThemeData(
-//                  primarySwatch: Colors.red,
-//                  primaryColor: Colors.white,
-//               //   scaffoldBackgroundColor:Colors.grey[100],//内容背景颜色
-//                ),
-                //GlobalConfig.themeData,
                 home: MyHomePage(),
 
     ),
@@ -56,8 +51,8 @@ class _MyHomePageState extends State<MyHomePage> {
   PageController pageController;
   int page = 0;
   var text_Family = 'ShouJinting';
-  double text_Size = 20.0;
-  double icon_Size = 30.0;
+
+  //double text_Size = 20.0;
   @override
   void setState(fn) {
     // TODO: implement setState
@@ -70,15 +65,14 @@ class _MyHomePageState extends State<MyHomePage> {
         builder: (BuildContext context, Widget child, MainModel model){
           return WillPopScope(
         child: Scaffold(
-
           body: PageView(
             children: <Widget>[AppBarDemoPage(),SearchBarDemoPage(), NewsPage(), MinePage()],
             onPageChanged: onPageChanged,
             controller: pageController,
           ),
           floatingActionButton: Container(
-            height: 80.0,
-            width: 80.0,
+            height: Adapt.px(80),
+            width: Adapt.px(80),
             child: FloatingActionButton(
               backgroundColor: Theme.of(context).primaryColor ,
               onPressed: () {
@@ -102,7 +96,7 @@ class _MyHomePageState extends State<MyHomePage> {
               //mini: false,
               child: Icon(
                 Icons.photo_camera,
-                size: 45,
+                size: Adapt.px(45),
                 color: Theme.of(context).accentColor,
 
 
@@ -127,8 +121,8 @@ class _MyHomePageState extends State<MyHomePage> {
                       child: Column(
                         mainAxisSize: MainAxisSize.min,
                         children: <Widget>[
-                          Icon(Icons.calendar_today, color: getColor(0),size: this.icon_Size,),
-                          Text("推荐", style: TextStyle(color: getColor(0),fontSize:this.text_Size,fontFamily: this.text_Family,))
+                          Icon(Icons.calendar_today, color: getColor(0),size:Adapt.px(45),),
+                          Text("推荐", style: TextStyle(color: getColor(0),fontSize:Adapt.px(30),fontFamily: this.text_Family,))
                         ],
                       )),
                   GestureDetector(
@@ -139,8 +133,8 @@ class _MyHomePageState extends State<MyHomePage> {
                       child: Column(
                         mainAxisSize: MainAxisSize.min,
                         children: <Widget>[
-                          Icon(Icons.search, color: getColor(1),size: this.icon_Size,),
-                          Text("搜索", style: TextStyle(color: getColor(1),fontSize:this.text_Size,fontFamily: this.text_Family,))
+                          Icon(Icons.search, color: getColor(1),size: Adapt.px(45),),
+                          Text("搜索", style: TextStyle(color: getColor(1),fontSize:Adapt.px(30),fontFamily: this.text_Family,))
                         ],
                       )),
                   Column(
@@ -160,8 +154,8 @@ class _MyHomePageState extends State<MyHomePage> {
                       child: Column(
                         mainAxisSize: MainAxisSize.min,
                         children: <Widget>[
-                          Icon(Icons.mail, color: getColor(2),size: this.icon_Size,),
-                          Text("随记", style: TextStyle(color: getColor(2),fontSize:this.text_Size,fontFamily: this.text_Family,))
+                          Icon(Icons.mail, color: getColor(2),size: Adapt.px(45),),
+                          Text("随记", style: TextStyle(color: getColor(2),fontSize:Adapt.px(30),fontFamily: this.text_Family,))
                         ],
                       )),
                   GestureDetector(
@@ -171,8 +165,8 @@ class _MyHomePageState extends State<MyHomePage> {
                       child: Column(
                         mainAxisSize: MainAxisSize.min,
                         children: <Widget>[
-                          Icon(Icons.person, color: getColor(3),size: this.icon_Size,),
-                          Text("我的", style: TextStyle(color: getColor(3),fontSize:this.text_Size,fontFamily: this.text_Family,))
+                          Icon(Icons.person, color: getColor(3),size: Adapt.px(45),),
+                          Text("我的", style: TextStyle(color: getColor(3),fontSize:Adapt.px(30),fontFamily: this.text_Family,))
                         ],
                       ))
                 ],
@@ -180,17 +174,18 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
           ),
         ),
-        onWillPop: () {
-          int newTime = DateTime.now().millisecondsSinceEpoch;
-          int result = newTime - lastTime;
-          lastTime = newTime;
-          if (result > 2000) {
-           // Toast.show(context, '再按一次退出');
-          } else {
-            SystemNavigator.pop();
-          }
-          return null;
-        });
+//        onWillPop: () {
+//          int newTime = DateTime.now().millisecondsSinceEpoch;
+//          int result = newTime - lastTime;
+//          lastTime = newTime;
+//          if (result > 2000) {
+//          // Toast.show(context, '再按一次退出');
+//          } else {
+//            SystemNavigator.pop();
+//          }
+//          return null;
+//        }
+        );
         }
     );
 

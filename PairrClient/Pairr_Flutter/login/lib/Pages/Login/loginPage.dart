@@ -114,7 +114,12 @@ class _LoginPageState extends State<LoginPage> {
     return ScopedModelDescendant<MainModel>(
         builder: (BuildContext context, Widget child, MainModel model){
           return Scaffold(
-           appBar: AppBar(title: Text('登录'),),
+           appBar: AppBar(
+             leading: new IconButton(
+               icon: new Icon(Icons.arrow_back_ios, color: Theme.of(context).accentColor ,),
+               onPressed: () => Navigator.of(context).pop(),
+             ),
+             title: Text('登录'),),
            body: GestureDetector(
         onTap: () {
           print('点击了空白区域');

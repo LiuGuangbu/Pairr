@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:login/Pages/Login/loginPage.dart';
+import 'package:login/scoped_models/Adapt.dart';
 import 'package:login/scoped_models/ConfigProvide.dart';
 import 'package:login/scoped_models/main.dart';
 import 'package:scoped_model/scoped_model.dart';
@@ -13,7 +14,7 @@ class noLogonSetting extends StatefulWidget{
 
 }
 class _noLogonSetting extends State<noLogonSetting>{
-  double _fontSize = 18;
+  //double _fontSize = 18;
   @override
   void setState(fn) {
     // TODO: implement setState
@@ -25,29 +26,32 @@ class _noLogonSetting extends State<noLogonSetting>{
     return ScopedModelDescendant<MainModel>(
         builder: (BuildContext context, Widget child, MainModel model){
           return Scaffold(
-            appBar: AppBar(title: Text('设置'),centerTitle: true,),
+            appBar: AppBar(
+              leading: new IconButton(
+                icon: new Icon(Icons.arrow_back_ios, color: Theme.of(context).accentColor ,),
+                onPressed: () => Navigator.of(context).pop(),
+              ),
+              title: Text('设置',style: TextStyle(color: Theme.of(context).accentColor ,),),centerTitle: true,),
             body: Container(
               child: ListView(
                 children: <Widget>[
                   new Container(
-                    decoration: BoxDecoration(
-                      border: Border(
-                        top: BorderSide(width: 5,color: Color(0xffe5e5e5)),
-                          bottom: BorderSide(width: 1,color: Color(0xffe5e5e5))),),
+                    decoration: BoxDecoration(border: Border(bottom: BorderSide(width: Adapt.px(1),color: Theme.of(context).dividerColor)),),
+
                     child:  ListTile(
-                      title: Text('简繁切换',style: TextStyle(fontSize: this._fontSize),),
+                      title: Text('简繁切换',style: TextStyle(color:Theme.of(context).accentColor,fontSize: Adapt.px(18)),),
                       //   leading: Icon(Icons.build),
-                      trailing: Icon(Icons.arrow_forward_ios),
+                      trailing: Icon(Icons.arrow_forward_ios,color: Theme.of(context).accentColor,),
                       onTap: () {
                       },
                     ),
                   ),
                   new Container(
-                    decoration: BoxDecoration(border: Border(bottom: BorderSide(width: 1,color: Color(0xffe5e5e5))),),
+                    decoration: BoxDecoration(border: Border(bottom: BorderSide(width: Adapt.px(1),color: Theme.of(context).dividerColor)),),
                     child:  ListTile(
-                      title: Text('孟诗韩笔字体',style: TextStyle(fontSize: this._fontSize),),
+                      title: Text('推荐字体',style: TextStyle(color:Theme.of(context).accentColor,fontSize: Adapt.px(18)),),
                       //   leading: Icon(Icons.build),
-                      trailing: Icon(Icons.arrow_forward_ios),
+                      trailing: Icon(Icons.arrow_forward_ios,color: Theme.of(context).accentColor,),
                       onTap: () {
                         if(model.logonstate ==false) {
                           Navigator.push(context,
@@ -60,11 +64,11 @@ class _noLogonSetting extends State<noLogonSetting>{
                     ),
                   ),
                   new Container(
-                    decoration: BoxDecoration(border: Border(bottom: BorderSide(width: 8,color: Color(0xffe5e5e5))),),
+                    decoration: BoxDecoration(border: Border(bottom: BorderSide(width: Adapt.px(8),color: Theme.of(context).dividerColor)),),
                     child:  ListTile(
-                      title: Text('主题风格',style: TextStyle(fontSize: this._fontSize),),
+                      title: Text('主题风格',style: TextStyle(color:Theme.of(context).accentColor,fontSize: Adapt.px(18)),),
                       //   leading: Icon(Icons.build),
-                      trailing: Icon(Icons.arrow_forward_ios),
+                      trailing: Icon(Icons.arrow_forward_ios,color: Theme.of(context).accentColor,),
                       onTap: () {
                            showModalBottomSheet<void>(
                            context: context, 
@@ -82,7 +86,8 @@ class _noLogonSetting extends State<noLogonSetting>{
                               title: Text('白色简洁风'),
                               trailing: Text('应用'),
                               onTap: (){
-                                Provide.value<ConfigProvide>(context).$setTheme('white');  //修改当前主题
+                                Provide.value<ConfigProvide>(context).$setTheme('white');
+                                global.setThemeV('white');//修改当前主题
                                 Navigator.of(context).pop();
                               },
                             ),
@@ -91,6 +96,7 @@ class _noLogonSetting extends State<noLogonSetting>{
                               trailing: Text('应用'),
                               onTap: (){
                                 Provide.value<ConfigProvide>(context).$setTheme('black');
+                                global.setThemeV('black');//修改当前主题
                                 Navigator.of(context).pop();//修改当前主题
                               },
                             )
@@ -102,22 +108,22 @@ class _noLogonSetting extends State<noLogonSetting>{
                     ),
                   ),
                   new Container(
-                    decoration: BoxDecoration(border: Border(bottom: BorderSide(width: 1,color: Color(0xffe5e5e5))),),
+                    decoration: BoxDecoration(border: Border(bottom: BorderSide(width: Adapt.px(1),color: Theme.of(context).dividerColor)),),
                     child:  ListTile(
-                      title: Text('清楚缓存',style: TextStyle(fontSize: this._fontSize),),
+                      title: Text('清楚缓存',style: TextStyle(color:Theme.of(context).accentColor,fontSize:Adapt.px(18)),),
                       //   leading: Icon(Icons.build),
-                      trailing: Icon(Icons.arrow_forward_ios),
+                      trailing: Icon(Icons.arrow_forward_ios,color: Theme.of(context).accentColor,),
                       onTap: () {
                       },
 
                     ),
                   ),
                   new Container(
-                    decoration: BoxDecoration(border: Border(bottom: BorderSide(width: 1,color: Color(0xffe5e5e5))),),
+                    decoration: BoxDecoration(border: Border(bottom: BorderSide(width: Adapt.px(1),color: Theme.of(context).dividerColor)),),
                     child:  ListTile(
-                      title: Text('版本更新',style: TextStyle(fontSize: this._fontSize),),
+                      title: Text('版本更新',style: TextStyle(color:Theme.of(context).accentColor,fontSize: Adapt.px(18)),),
                       //   leading: Icon(Icons.build),
-                      trailing: Icon(Icons.arrow_forward_ios),
+                      trailing: Icon(Icons.arrow_forward_ios,color: Theme.of(context).accentColor,),
                       onTap: () {
                       },
 

@@ -6,30 +6,35 @@ Map materialColor = { // 主副颜色
     "accentColor" :0xFFF8F8F8,//白色
     "scaffoldBackgroundColor":0xFFFCFAFA,//页面背景颜色灰色
     "primaryColorLight":0xFF03A9F4,//蓝色  ——选中颜色
+    "dividerColor":0xffe5e5e5,//浅灰白
   },
   'pink': {
     "primaryColor": 0xFFF44336,//红色
     "accentColor" :0xFFF8F8F8,//白se
     "scaffoldBackgroundColor":0xFFFCFAFA,//页面背景颜色灰色
     "primaryColorLight": 0xFF000000 ,//黑色
+    "dividerColor":0xffe5e5e5,//浅灰白
   },
   'white':{
     "primaryColor": 0xFFF8F8F8,//白se _应用与主题
     "accentColor" :0xFF000000 ,//黑色 ——未选中颜色
-    "scaffoldBackgroundColor":0xFFFCFAFA,//页面背景颜色灰色
+    "scaffoldBackgroundColor":0xFFECECE8,//页面背景颜色灰色0xffe5e5e5
     "primaryColorLight":0xFFF44336,//红色  ——选中颜色
+    "dividerColor":0xFFF8F8F8,//浅灰白
   },
   'deepblack': {
-    "primaryColor": 0xFF000000 ,//黑色
+    "primaryColor":0xFF555352,//灰色
     "accentColor" :0xFFE7E0E0,//不太白色
-    "scaffoldBackgroundColor":0xFF443F3F,//页面背景颜色灰色
+    "scaffoldBackgroundColor":0xFF3A3737,//0xFF000000 ,//黑色页面背景颜色
     "primaryColorLight":0xFF03A9F4,//蓝色  ——选中颜色
+    "dividerColor":0xFF555352,
   },
   'blue': {
     "primaryColor": 0xFF1976D2,
     "accentColor" :0xFFd81b60,
     "scaffoldBackgroundColor":0xFFFCFAFA,//页面背景颜色灰色
     "primaryColorLight": 0xFF2196F3,
+    "dividerColor":0xffe5e5e5,//浅灰白
   },
 };
 
@@ -41,6 +46,7 @@ class AppTheme {
       scaffoldBackgroundColor:Color(mainColor["scaffoldBackgroundColor"]), // 页面的背景颜色
       primaryColor: Color(mainColor["primaryColor"]), // 主颜色
       accentColor:Color(mainColor["accentColor"]),
+      dividerColor: Color(mainColor["dividerColor"]),
       primaryColorLight: Color(mainColor["primaryColorLight"]),
       // 按钮颜色
       buttonTheme: ButtonThemeData(

@@ -23,6 +23,12 @@ class TestPage extends StatelessWidget {
     return new DefaultTabController(
         length: tabTitle.length,
         child: Scaffold(
+          appBar: AppBar(
+            leading: new IconButton(
+              icon: new Icon(Icons.arrow_back_ios, color: Theme.of(context).accentColor ,),
+              onPressed: () => Navigator.of(context).pop(),
+            ),
+          ),
           body: new NestedScrollView(
             headerSliverBuilder: (context, bool) {
               return [

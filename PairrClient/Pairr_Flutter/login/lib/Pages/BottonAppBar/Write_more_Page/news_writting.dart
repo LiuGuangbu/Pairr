@@ -6,6 +6,10 @@ class NewsWritting extends StatelessWidget{
     // TODO: implement build
     return Scaffold(
       appBar: AppBar(
+        leading: new IconButton(
+          icon: new Icon(Icons.arrow_back_ios, color: Theme.of(context).accentColor ,),
+          onPressed: () => Navigator.of(context).pop(),
+        ),
         title: Text('随记编辑'),
       ),
       body: Container(

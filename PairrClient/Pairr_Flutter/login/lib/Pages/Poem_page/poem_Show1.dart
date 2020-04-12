@@ -10,6 +10,10 @@ class PoemsListView extends StatelessWidget {
     return Container(
       child: Scaffold(
         appBar: AppBar(
+            leading: new IconButton(
+              icon: new Icon(Icons.arrow_back_ios, color: Theme.of(context).accentColor ,),
+              onPressed: () => Navigator.of(context).pop(),
+            ),
             title: Row(
               children: <Widget>[
                 Text('搜索结果'),

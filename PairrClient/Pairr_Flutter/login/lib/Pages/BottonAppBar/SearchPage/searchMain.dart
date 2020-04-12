@@ -3,10 +3,11 @@ import 'package:flutter/cupertino.dart' as prefix0;
 import 'package:flutter/material.dart';
 import 'package:flutter/material.dart' as prefix1;
 import 'package:login/Pages/Poem_page/add_Poem.dart';
+import 'package:login/Pages/Poem_page/listView_Poem.dart';
 import 'dart:ui';
 import 'package:login/Pages/Poem_page/poem_Show1.dart';
 import 'package:login/Pages/Poem_page/poem_Show.dart';
-import 'package:login/Pages/Poem_page/poem_listview.dart';
+import 'package:login/scoped_models/Adapt.dart';
 
 
 class SearchBarDemoPage extends StatefulWidget {
@@ -24,9 +25,15 @@ class _SearchBarDemoPageState extends State<SearchBarDemoPage> {
   var searpart;
   var _isShowClear = false;
   List list =[];//搜索历史数值
+  List list_Recommend = ['梅花','繁花似锦','中秋节','爱情诗','爱我中华','陶渊明','惆怅','李白'];
   void _searchClear(String s){//删除搜索历史某个数值，更新
     setState(() {
       list.remove(s);
+    });
+  }
+  void _isChipRecommend(){
+    setState(() {
+
     });
   }
   @override
@@ -69,7 +76,6 @@ class _SearchBarDemoPageState extends State<SearchBarDemoPage> {
     }
 
   }
-
   Widget build(BuildContext context) {
     return Scaffold(
       body:GestureDetector(
@@ -90,11 +96,13 @@ class _SearchBarDemoPageState extends State<SearchBarDemoPage> {
                       child: Row(
                         children: <Widget>[
                           new Expanded(child:
-                          new Card(
+                          new Container(
                               child: new Container(
                                 decoration: new BoxDecoration(
-                                  borderRadius: new BorderRadius.all(new Radius.circular(20.0)),
-                                  border: new Border.all(width: 2.0, color: Colors.red),
+                                  borderRadius: new BorderRadius.all(
+                                      new Radius.circular(20.0)),
+                                  border: new Border.all(width: 2.0,
+                                      color: Theme.of(context).primaryColorLight,),
                                 ),
                                 padding: EdgeInsets.only(right: 10),
                                 child: new Row(
@@ -103,17 +111,20 @@ class _SearchBarDemoPageState extends State<SearchBarDemoPage> {
                                     //SizedBox(width: 5.0,),
                                     new IconButton(
                                       icon: new Icon(Icons.search),
-                                      color: Colors.grey,
-                                      iconSize: 30.0,
+                                      color: Theme.of(context).accentColor,
+                                      iconSize: Adapt.px(40),
                                       onPressed: () {
+
                                         print(_searchController);
                                         searpart=_searchController.text;
+                                        if(searpart == null){
+
+                                        };//后期判断搜索内容是否为空，弄个提示框
+
                                         print(searpart);
                                         list.add(searpart);
                                         Navigator.push(context,
-                                            MaterialPageRoute(builder: (context) => MyHomePage()));
-
-
+                                            MaterialPageRoute(builder: (context) => httpPage()));
                                       },
                                     ),
                                     // Icon(Icons.search, size:30,color: Colors.grey,),
@@ -126,14 +137,15 @@ class _SearchBarDemoPageState extends State<SearchBarDemoPage> {
                                             controller: _searchController,
                                           //  focusNode: _focusNodeSearch,
 
-                                            style: TextStyle(fontSize: 25,fontFamily: 'FontJian'),
+                                            style: TextStyle(fontSize: Adapt.px(25),color:Theme.of(context).accentColor,fontFamily: 'FontJian'),
                                             decoration: new InputDecoration(
                                              // contentPadding: EdgeInsets.only(top: 1.0),
                                               hintText: 'Search',
                                               //focusColor: Colors.white,
-                                              hintStyle: TextStyle(color: Colors.black12),
+                                              hintStyle: TextStyle(color: Theme.of(context).accentColor,),
                                               border: InputBorder.none,
                                               suffixIcon:IconButton(
+                                                color: Theme.of(context).accentColor,
                                                   icon: Icon((_isShowClear)?Icons.cancel:Icons.keyboard_voice), onPressed:
                                               (){
                                                     _searchController.clear();
@@ -141,28 +153,31 @@ class _SearchBarDemoPageState extends State<SearchBarDemoPage> {
                                             ) ,
                                           ),
                                         )),
+                                    new Container(
+                                        padding: EdgeInsets.fromLTRB(8, 0, 5, 0),
+                                        child: new RaisedButton(onPressed: (){
+                                          _focusNodeSearch.unfocus();
+                                          print(_searchController);
+                                          searpart=_searchController.text;
+                                          print(searpart);
+                                         // if(searpart)//这还是有问题
+                                            list.add(searpart);
+                                          Navigator.push(context,
+                                              MaterialPageRoute(builder: (context) => PoemsListView()));
+                                        },
+                                          color: Theme.of(context).accentColor,
+                                          splashColor: Colors.red,
+                                          child: Text('搜索',style: TextStyle(
+                                              color: Theme.of(context).primaryColor,
+                                              fontSize: Adapt.px(30),fontFamily: 'FontJian'),),)
+                                    )
 
                                   ],
                                 ),
                               )
                           ),
                           ),
-                          new Container(
-                            padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
-                            child: new RaisedButton(onPressed: (){
-                              _focusNodeSearch.unfocus();
-                              print(_searchController);
-                              searpart=_searchController.text;
-                              print(searpart);
-                              if(searpart.isEmpty)//这还是有问题
-                                list.add(searpart);
-                              Navigator.push(context,
-                                  MaterialPageRoute(builder: (context) => PoemsListView()));
-                            },
-                              color: Colors.grey[100],
-                              splashColor: Colors.red,
-                              child: Text('搜索',style: TextStyle(fontSize: 15,fontFamily: 'FontJian'),),)
-                          )
+
 
                         ],
                       ),
@@ -172,10 +187,11 @@ class _SearchBarDemoPageState extends State<SearchBarDemoPage> {
             ),
             new Container(
               alignment: Alignment.centerLeft,
-              padding: EdgeInsets.fromLTRB(40, 20, 0, 20),
+              padding: EdgeInsets.all(Adapt.px(20)),
               child: Text('热搜',
                 style: TextStyle(
-                  fontSize: 25,
+                  color: Theme.of(context).accentColor,
+                  fontSize: Adapt.px(35),
                   fontFamily: 'FontJian',
                 ),),
             ),
@@ -183,14 +199,14 @@ class _SearchBarDemoPageState extends State<SearchBarDemoPage> {
               child: ChipTheme(
 //统一设置Chip组件样式
                 data: ChipThemeData(
-                  backgroundColor:Colors.white,
-                  disabledColor:Colors.white,
-                  selectedColor:Colors.white,
-                  secondarySelectedColor:Colors.white,
-                  labelPadding:EdgeInsets.fromLTRB(10, 10, 10,10),
+                  backgroundColor:Theme.of(context).primaryColor,
+                  disabledColor:Theme.of(context).primaryColor,
+                  selectedColor:Theme.of(context).primaryColor,
+                  secondarySelectedColor:Theme.of(context).primaryColor,
+                  labelPadding:EdgeInsets.all(Adapt.px(10)),
                   padding:EdgeInsets.all(0),
-                  shape: StadiumBorder(side: BorderSide(width: 2, style: BorderStyle.solid, color: Colors.red)),
-                  labelStyle:TextStyle(color: Colors.black),
+                  shape: StadiumBorder(side: BorderSide(width: 2, style: BorderStyle.solid, color: Theme.of(context).dividerColor,)),
+                  labelStyle:TextStyle(color: Theme.of(context).accentColor,),
                   secondaryLabelStyle:TextStyle(color: Colors.white),
                   brightness:Brightness.dark,
                   //elevation:20,//背景阴影颜色
@@ -200,44 +216,35 @@ class _SearchBarDemoPageState extends State<SearchBarDemoPage> {
                   spacing: 8.0,
                   runSpacing: 10.0,
                   children: <Widget>[
-                    Chip(label: Text('梅花',style: TextStyle(fontFamily: 'FontShou',fontSize: 20),),),
-                    Chip(label: Text('繁花似锦',style: TextStyle(fontFamily: 'FontShou',fontSize: 20),),),
-                    Chip(label: Text('中秋节',style: TextStyle(fontFamily: 'FontShou',fontSize: 20),),),
-                    Chip(label: Text('爱情诗',style: TextStyle(fontFamily: 'FontShou',fontSize: 20),),),
-                    Chip(label: Text('爱我中华',style: TextStyle(fontFamily: 'FontShou',fontSize: 20),),),
-                    Chip(label: Text('陶渊明',style: TextStyle(fontFamily: 'FontShou',fontSize: 20),),),
-                    Chip(label: Text('李白',style: TextStyle(fontFamily: 'FontShou',fontSize: 20),),),
-                    Chip(label: Text('惆怅',style: TextStyle(fontFamily: 'FontShou',fontSize: 20),),),
-
+                   // Chip(label: Text('${list_Recommend[]}'),),
+                    Chip(label: Text('梅花',style: TextStyle(//fontFamily: 'FontShou',
+                        fontSize: Adapt.px(30)),),),
+                    Chip(label: Text('繁花似锦',style: TextStyle(//fontFamily: 'FontShou',
+                        fontSize: Adapt.px(30)),),),
+                    Chip(label: Text('中秋节',style: TextStyle(//fontFamily: 'FontShou',
+                        fontSize: Adapt.px(30)),),),
+                    Chip(label: Text('爱情诗',style: TextStyle(//fontFamily: 'FontShou',
+                        fontSize: Adapt.px(30)),),),
+                    Chip(label: Text('爱我中华',style: TextStyle(//fontFamily: 'FontShou',
+                        fontSize: Adapt.px(30)),),),
+                    Chip(label: Text('陶渊明',style: TextStyle(//fontFamily: 'FontShou',
+                        fontSize: Adapt.px(30)),),),
+                    Chip(label: Text('李白',style: TextStyle(//fontFamily: 'FontShou',
+                        fontSize: Adapt.px(30)),),),
+                    Chip(label: Text('惆怅',style: TextStyle(//fontFamily: 'FontShou',
+                        fontSize: Adapt.px(30)),),),
                   ],
                 ),
               ),
             ),
-//单个标签添加
-//            new Container(
-//              child:
-//              Chip(
-//                avatar: Icon(Icons.add_alert),
-//                label: Text('buttom'),
-//                deleteIcon: Icon(Icons.close),
-//                deleteIconColor:Colors.red,
-//                deleteButtonTooltipMessage:'干啥',
-//                labelStyle: TextStyle(color: Colors.white),
-//                backgroundColor: Colors.blue,
-//                elevation:20,
-//                shadowColor:Colors.red,
-//                onDeleted: (){
-//                  print('object');
-//                },
-//              ),
-//            ),
 
             new Container(
               alignment: Alignment.centerLeft,
-              padding: EdgeInsets.fromLTRB(40, 20, 0, 0),
+              padding: EdgeInsets.all(Adapt.px(20)),
               child: Text('搜索历史',
                 style: TextStyle(
-                  fontSize: 25,
+                  color: Theme.of(context).accentColor,
+                  fontSize: Adapt.px(35),
                   fontFamily: 'FontJian',
                 ),),
             ),
@@ -249,33 +256,27 @@ class _SearchBarDemoPageState extends State<SearchBarDemoPage> {
                       padding: EdgeInsets.fromLTRB(20, 0, 20, 10),
                       child:Row(
                         children: <Widget>[
-                          Expanded(child: Text('${list[index]}',style: TextStyle(fontSize: 25,fontFamily: 'FontShou'),),),
+                          Expanded(child: Text('${list[index]}',style: TextStyle(fontSize: Adapt.px(35),fontFamily: 'FontShou'),),),
                           IconButton(
+                            color: Theme.of(context).accentColor,
                             icon: Icon(Icons.clear),
                             onPressed: (){
                               _searchClear('${list[index]}');
-
                             },
                           )
                         ],
                       ),
-
-
                     );
                   },
                 ) ),
-
-
-
-
-
           ],
         ),
       ),
       )
-
     );
   }
 }
+
+
 
 
