@@ -238,7 +238,7 @@ class home_Page extends StatelessWidget{
                               height:  Adapt.px(600),
                               child: CustomPaint(
                                 painter: VerticalText(
-                                  text: "你好，这是垂直排版的文字，排版顺序从上到下，从右到左。😊😂😄",
+                                  text: "      ${poems_list[index].poem_author}",
                                   textStyle: TextStyle(
                                       fontFamily: this.text_Family_Poem,
                                       // fontFamily: 'MaoZedong',
@@ -253,8 +253,8 @@ class home_Page extends StatelessWidget{
                             ),
                             Container(
                              // color: Colors.black12,
-                              width:  Adapt.px(100),
-                              height:  Adapt.px(600),
+                              width:  300,
+                              height:  600,
                               child: CustomPaint(
                                 painter: VerticalText(
                                   text: poems_list[index].poem_text,
@@ -262,11 +262,30 @@ class home_Page extends StatelessWidget{
                                       fontFamily: this.text_Family_Poem,
                                       // fontFamily: 'MaoZedong',
                                       color: Colors.black,
+                                      fontSize:  Adapt.px(50),
+                                      letterSpacing: 4,
+                                      wordSpacing: 4),
+                                  width: 300,
+                                  height: 600,
+                                ),
+                              ),
+                            ),
+                            Container(
+                              // color: Colors.black12,
+                              width: Adapt.px(100),
+                              height:  Adapt.px(600),
+                              child: CustomPaint(
+                                painter: VerticalText(
+                                  text: poems_list[index].poem_title,
+                                  textStyle: TextStyle(
+                                      fontFamily: this.text_Family_Poem,
+                                      // fontFamily: 'MaoZedong',
+                                      color: Colors.black,
                                       fontSize:  Adapt.px(30),
                                       letterSpacing: 4,
                                       wordSpacing: 4),
-                                  width: 100,
-                                  height: 500,
+                                  width:  Adapt.px(100),
+                                  height:  Adapt.px(500),
                                 ),
                               ),
                             ),

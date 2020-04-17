@@ -11,7 +11,7 @@ import 'package:login/Pages/BottonAppBar/PhotoPage/photoMain.dart';
 import 'package:login/Pages/BottonAppBar/SearchPage/searchMain.dart';
 import 'package:login/Pages/BottonAppBar/UserPage/mineMain.dart';
 import 'package:login/Pages/BottonAppBar/Write_more_Page/newsMain.dart';
-import 'package:login/Pages/BottonAppBar/HomePage/home_page_1.dart';
+import 'package:login/Pages/BottonAppBar/HomePage/home_page.dart';
 import 'package:login/scoped_models/main.dart';
 
 void main() async {
@@ -66,7 +66,7 @@ class _MyHomePageState extends State<MyHomePage> {
           return WillPopScope(
         child: Scaffold(
           body: PageView(
-            children: <Widget>[AppBarDemoPage(),SearchBarDemoPage(), NewsPage(), MinePage()],
+            children: <Widget>[home_Page(),SearchBarDemoPage(), NewsPage(), MinePage()],
             onPageChanged: onPageChanged,
             controller: pageController,
           ),

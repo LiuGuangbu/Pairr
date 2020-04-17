@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'dart:convert' as convert;
 import 'package:http/http.dart' as http;
+import 'package:login/Pages/Poem_page/Show_Poem.dart';
+import 'package:login/scoped_models/main.dart';
 class httpPage extends StatefulWidget
 {
   @override
@@ -21,7 +23,9 @@ class httpGet extends State<httpPage>{
     print('开始请求了！！！');
     //var apiUrl="http://127.0.0.1:54946/serach";
     var apiUrl="http://192.168.191.1:5000/serach";
-    var response = await http.post(apiUrl,body:{'label':'今晚的月亮好美啊'});
+    String apiSearch = global.getSearchV();//搜索的内容
+    var response = await http.post(apiUrl,body:{'label':apiSearch});
+    //var response = await http.post(apiUrl,body:{'label':'今晚的月亮好美啊'});
     if(response.statusCode==200){
       print(convert.jsonDecode(response.body));
       setState((){
@@ -49,6 +53,12 @@ class httpGet extends State<httpPage>{
             return ListTile(
               title: Text(value['poemname']),
               subtitle: Text(value['content']),
+              onTap: (){
+                global.setSearchName(value['poemname']);
+                global.setSearchContent(value['content']);
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) =>ShowPoem()));
+              },
             );
           }).toList(),
         ):Text("加载中...")

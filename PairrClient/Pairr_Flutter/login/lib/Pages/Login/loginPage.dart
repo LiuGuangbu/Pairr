@@ -119,7 +119,7 @@ class _LoginPageState extends State<LoginPage> {
                icon: new Icon(Icons.arrow_back_ios, color: Theme.of(context).accentColor ,),
                onPressed: () => Navigator.of(context).pop(),
              ),
-             title: Text('登录'),),
+             title: Text('登录',style: TextStyle(color: Theme.of(context).accentColor ),),),
            body: GestureDetector(
         onTap: () {
           print('点击了空白区域');

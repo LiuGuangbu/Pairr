@@ -152,11 +152,11 @@ class VacationBean {
 
   static List<VacationBean> generate() {
     return [
-      VacationBean("lib/images/pic1.jpg", "Japan"),
-      VacationBean("lib/images/pic2.jpg", "Franch"),
-      VacationBean("lib/images/pic3.jpg", "Paris"),
-      VacationBean("lib/images/pic4.jpg", "London"),
-      VacationBean("lib/images/pic5.jpg", "China"),
+      VacationBean("lib/images/pic1.jpg", "  "),
+      VacationBean("lib/images/pic2.jpg", "  "),
+      VacationBean("lib/images/pic3.jpg", " "),
+      VacationBean("lib/images/pic4.jpg", "  "),
+      VacationBean("lib/images/pic5.jpg", "  "),
     ];
   }
 }

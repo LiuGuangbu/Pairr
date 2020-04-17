@@ -64,7 +64,7 @@ class _LogonMain extends State<LogonMain>{
           children: <Widget>[
                  new Expanded(child: new Container(
                 alignment: Alignment.center,
-                   child: Text('我')),),
+                   child: Text('我',style: TextStyle(  color: Theme.of(context).accentColor ,),)),),
                  IconButton(
                   icon: Icon(Icons.settings),
               color: Theme.of(context).accentColor ,
@@ -223,7 +223,7 @@ class _LogonMain extends State<LogonMain>{
                 child:  ListTile(
                   title: Text('夜间模式',style: TextStyle(
                       color: Theme.of(context).accentColor ,
-                      fontSize:Adapt.px(30)),),
+                      fontSize:18),),
                   //   leading: Icon(Icons.build),
                   trailing:
                   CupertinoSwitch(

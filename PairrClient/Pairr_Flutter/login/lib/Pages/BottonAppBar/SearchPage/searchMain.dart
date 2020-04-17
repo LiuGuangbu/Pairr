@@ -1,13 +1,11 @@
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/cupertino.dart' as prefix0;
 import 'package:flutter/material.dart';
-import 'package:flutter/material.dart' as prefix1;
-import 'package:login/Pages/Poem_page/add_Poem.dart';
-import 'package:login/Pages/Poem_page/listView_Poem.dart';
+import 'package:login/Pages/Poem_page/Show_Poem.dart';
 import 'dart:ui';
+import 'package:login/Pages/Poem_page/listView_Poem.dart';
 import 'package:login/Pages/Poem_page/poem_Show1.dart';
-import 'package:login/Pages/Poem_page/poem_Show.dart';
 import 'package:login/scoped_models/Adapt.dart';
+import 'package:login/scoped_models/main.dart';
 
 
 class SearchBarDemoPage extends StatefulWidget {
@@ -83,9 +81,8 @@ class _SearchBarDemoPageState extends State<SearchBarDemoPage> {
           print('点击了空白区域');
           _focusNodeSearch.unfocus();
         },
-        child:
-              Container(
-        child: Column(
+        child: Container(
+         child: Column(
           children: <Widget>[
             Container(
               color: Theme.of(context).primaryColor,
@@ -114,33 +111,32 @@ class _SearchBarDemoPageState extends State<SearchBarDemoPage> {
                                       color: Theme.of(context).accentColor,
                                       iconSize: Adapt.px(40),
                                       onPressed: () {
-
+                                        _focusNodeSearch.unfocus();
                                         print(_searchController);
                                         searpart=_searchController.text;
                                         if(searpart == null){
 
                                         };//后期判断搜索内容是否为空，弄个提示框
 
-                                        print(searpart);
+
                                         list.add(searpart);
+                                        global.setSearchV(searpart);
+                                        print('搜索内容是：${global.getSearchV()}');
                                         Navigator.push(context,
-                                            MaterialPageRoute(builder: (context) => httpPage()));
+                                            MaterialPageRoute(builder: (context) => ShowPoem()));
                                       },
                                     ),
                                     // Icon(Icons.search, size:30,color: Colors.grey,),
                                     Expanded(
                                         child: Container(
-
                                           alignment: Alignment.center,
                                           child: TextFormField(
-
                                             controller: _searchController,
                                           //  focusNode: _focusNodeSearch,
-
                                             style: TextStyle(fontSize: Adapt.px(25),color:Theme.of(context).accentColor,fontFamily: 'FontJian'),
                                             decoration: new InputDecoration(
                                              // contentPadding: EdgeInsets.only(top: 1.0),
-                                              hintText: 'Search',
+                                              hintText: '请输入...',
                                               //focusColor: Colors.white,
                                               hintStyle: TextStyle(color: Theme.of(context).accentColor,),
                                               border: InputBorder.none,
@@ -159,11 +155,13 @@ class _SearchBarDemoPageState extends State<SearchBarDemoPage> {
                                           _focusNodeSearch.unfocus();
                                           print(_searchController);
                                           searpart=_searchController.text;
-                                          print(searpart);
-                                         // if(searpart)//这还是有问题
+                                          if(searpart != ""){
                                             list.add(searpart);
-                                          Navigator.push(context,
-                                              MaterialPageRoute(builder: (context) => PoemsListView()));
+                                            global.setSearchV(searpart);
+                                            print('搜索内容是：${global.getSearchV()}');
+                                            Navigator.push(context,
+                                                MaterialPageRoute(builder: (context) => httpPage()));
+                                          };//后期判断搜索内容是否为空
                                         },
                                           color: Theme.of(context).accentColor,
                                           splashColor: Colors.red,
