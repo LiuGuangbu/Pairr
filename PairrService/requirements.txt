@@ -3,7 +3,7 @@ document==1.0
 Flask==1.1.1
 Flask-PyMongo==2.3.0
 itsdangerous==1.1.0
-Jinja2==2.10.3
+Jinja2==2.11.3
 JPype1==0.7.0
 jsonify==0.5
 MarkupSafe==1.1.1
